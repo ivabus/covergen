@@ -1,0 +1,21 @@
+[package]
+name = "covergen"
+version = "0.1.0"
+description = "Generate images from music using FFT"
+edition = "2021"
+license = "MIT"
+authors = [ "Ivan Bushchik <ivabus@ivabus.dev>" ]
+repository = "https://github.com/ivabus/covergen"
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tiny-skia = "0.11.4"
+realfft = "3.3.0"
+symphonia = { version = "0.5.4", features = ["all-codecs", "all-formats"] }
+rand = "0.8.5"
+samplerate = "0.2.4"
+
+[profile.release]
+opt-level = 3
